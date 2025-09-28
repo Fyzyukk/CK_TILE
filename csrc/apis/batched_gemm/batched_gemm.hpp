@@ -1,0 +1,33 @@
+#pragma once
+
+#include <pybind11/pybind11.h>
+#include <torch/extension.h>
+#include <vector>
+
+#include "ck_tile/ops/gemm.hpp"
+
+namespace ck_tile_cpp {
+
+namespace batched_gemm {
+
+struct BatchedGemmArgs {
+    int Ms;        // M dimensions
+    int Ns;        // N dimensions  
+    int Ks;        // K dimensions
+    int batched_count;            
+    std::string dtype;          
+    bool validate;              
+    int warmup;                 
+    int repeat;                 
+};
+
+torch::Tensor batched_gemm_api(
+    torch::Tensor& A_tensor,
+    torch::Tensor& B_tensor,
+    const BatchedGemmArgs& args);
+
+void register_batched_gemm_apis(pybind11::module& m);
+
+} // namespace batched_gemm
+
+} // namespace ck_tile

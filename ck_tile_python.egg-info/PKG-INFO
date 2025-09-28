@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: ck_tile_python
+Version: 0.1.0
+Requires-Python: >=3.9
+Requires-Dist: torch
+Requires-Dist: pybind11
+Requires-Dist: einops
+Dynamic: requires-dist
+Dynamic: requires-python

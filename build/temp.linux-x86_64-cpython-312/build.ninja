@@ -1,0 +1,43 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /opt/rocm-6.4.1/bin/hipcc
+
+cflags = -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -fPIC -I/root/workspace/CK_TILE/ck_tile/include -I/opt/rocm-6.4.1/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include/THH -I/opt/rocm-6.4.1/include -I/root/workspace/.venv/include -I/usr/include/python3.12 -c
+post_cflags = -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -O3 -std=c++17 -Wno-unknown-pragmas -Wno-comment -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=ck_tile_python
+cuda_cflags = -I/root/workspace/CK_TILE/ck_tile/include -I/opt/rocm-6.4.1/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include/THH -I/opt/rocm-6.4.1/include -I/root/workspace/.venv/include -I/usr/include/python3.12 -c
+cuda_post_cflags = -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -DHIP_ENABLE_WARP_SYNC_BUILTINS=1 --offload-arch=gfx942 -O3 -std=c++17 -fgpu-flush-denormals-to-zero -DCK_ENABLE_BF16 -DCK_ENABLE_BF8 -DCK_ENABLE_FP16 -DCK_ENABLE_FP32 -DCK_ENABLE_FP64 -DCK_ENABLE_FP8 -DCK_ENABLE_INT8 -DCK_USE_XDL -DUSE_PROF_API=1 -D__HIP_PLATFORM_HCC__=1 -Wno-unknown-pragmas -Wno-comment -DCK_TILE_FLOAT_TO_BFLOAT16_DEFAULT=3 -mllvm --lsr-drop-solution=1 -fno-offload-uniform-block -mllvm -enable-post-misched=0 -mllvm -amdgpu-early-inline-all=true -mllvm -amdgpu-function-calls=false -DCK_TILE_FLOAT_TO_BFLOAT16_DEFAULT=3 -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=ck_tile_python -fno-gpu-rdc
+cuda_dlink_post_cflags = 
+sycl_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+
+
+
+
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/batched_gemm/batched_gemm.o: cuda_compile /root/workspace/CK_TILE/csrc/apis/batched_gemm/batched_gemm.hip
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/flatmm/flatmm.o: cuda_compile /root/workspace/CK_TILE/csrc/apis/flatmm/flatmm.hip
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/gemm/gemm.o: cuda_compile /root/workspace/CK_TILE/csrc/apis/gemm/gemm.hip
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/group_gemm/group_gemm.o: cuda_compile /root/workspace/CK_TILE/csrc/apis/group_gemm/group_gemm.hip
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/kernels/batched_gemm_kernel/batched_gemm_kernel.o: cuda_compile /root/workspace/CK_TILE/csrc/kernels/batched_gemm_kernel/batched_gemm_kernel.hip
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/kernels/flatmm_kernel/flatmm_kernel.o: cuda_compile /root/workspace/CK_TILE/csrc/kernels/flatmm_kernel/flatmm_kernel.hip
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/kernels/gemm_kernel/gemm_kernel.o: cuda_compile /root/workspace/CK_TILE/csrc/kernels/gemm_kernel/gemm_kernel.hip
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/kernels/group_gemm_kernel/grouped_gemm_kernel.o: cuda_compile /root/workspace/CK_TILE/csrc/kernels/group_gemm_kernel/grouped_gemm_kernel.hip
+build /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/python_api.o: cuda_compile /root/workspace/CK_TILE/csrc/python_api.hip
+
+
+
+
+
+
+
+

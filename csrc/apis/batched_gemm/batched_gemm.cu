@@ -1,0 +1,109 @@
+#include "batched_gemm.hpp"
+#include <hip/hip_runtime.h>
+#include <iostream>
+
+extern "C" float batched_gemm_fp16_fp16_fp16(
+    const ck_tile::BatchedGemmHostArgs& gemm_descs,
+    const ck_tile::stream_config& s);
+
+namespace ck_tile_cpp {
+
+namespace batched_gemm {
+
+torch::Tensor batched_gemm_api(
+    torch::Tensor& A_tensor,
+    torch::Tensor& B_tensor,
+    const BatchedGemmArgs& args) {
+    
+    const int M = args.Ms;
+    const int N = args.Ns;
+    const int K = args.Ks;
+    const int batch_count = args.batched_count;
+    
+    TORCH_CHECK(A_tensor.size(0) == batch_count && A_tensor.size(1) == M && A_tensor.size(2) == K,
+    "A tensor shape mismatch: expected (", batch_count, ", ", M, ", ", K, "), got ", A_tensor.sizes());
+    TORCH_CHECK(B_tensor.size(0) == batch_count && B_tensor.size(1) == K && B_tensor.size(2) == N,
+    "B tensor shape mismatch: expected (", batch_count, ", ", K, ", ", N, "), got ", B_tensor.sizes());
+
+    TORCH_CHECK(A_tensor.is_cuda(), "A tensor must be on device");
+    if (!A_tensor.is_contiguous()) {
+        A_tensor = A_tensor.contiguous();
+    }
+
+    TORCH_CHECK(B_tensor.is_cuda(), "B tensor must be on device");
+    if (B_tensor.stride(1) == 1 && B_tensor.stride(2) == B_tensor.size(1)) {
+    } else {
+        // Column Major
+        B_tensor = B_tensor.transpose(-2, -1).contiguous();
+    }
+
+    
+    torch::ScalarType c_dtype;
+    if (args.dtype == "fp16") {
+        c_dtype = torch::kFloat16;
+    } else {
+        TORCH_CHECK(false, "Unsupported dtype: ", args.dtype, ". Only fp16 is supported.");
+    }
+
+    auto C_tensor = torch::zeros({batch_count, M, N}, 
+                                torch::TensorOptions()
+                                 .dtype(c_dtype)
+                                 .device(A_tensor.device())
+                                 .memory_format(torch::MemoryFormat::Contiguous));
+    
+    ck_tile::BatchedGemmHostArgs gemm_desc;
+    
+    int stride_A = ck_tile::get_default_stride(M, K, 0, ck_tile::bool_constant<true>{});  // Row major -> K
+    int stride_B = ck_tile::get_default_stride(K, N, 0, ck_tile::bool_constant<false>{}); // Column major -> K
+    int stride_C = ck_tile::get_default_stride(M, N, 0, ck_tile::bool_constant<true>{});  // Row major -> N
+    
+    int batch_stride_A = M * K;
+    int batch_stride_B = K * N;
+    int batch_stride_C = M * N;
+    
+    gemm_desc.a_ptr = A_tensor.data_ptr();
+    gemm_desc.b_ptr = B_tensor.data_ptr();
+    gemm_desc.e_ptr = C_tensor.data_ptr();
+    gemm_desc.M = M;
+    gemm_desc.N = N;
+    gemm_desc.K = K;
+    gemm_desc.stride_A = stride_A;
+    gemm_desc.stride_B = stride_B;
+    gemm_desc.stride_E = stride_C;
+    gemm_desc.batch_stride_A = batch_stride_A;
+    gemm_desc.batch_stride_B = batch_stride_B;
+    gemm_desc.batch_stride_E = batch_stride_C;
+    gemm_desc.batch_count = batch_count;
+    gemm_desc.k_batch = 1;  
+
+    ck_tile::stream_config s{nullptr, true, 1, args.warmup, args.repeat};
+    
+    if (A_tensor.dtype() == torch::kFloat16 && B_tensor.dtype() == torch::kFloat16 && C_tensor.dtype() == torch::kFloat16) {
+        batched_gemm_fp16_fp16_fp16(gemm_desc, s);
+    } else {
+        TORCH_CHECK(false, "Unsupported dtype combination for Batched GEMM");
+    }
+
+    return C_tensor;
+}
+
+void register_batched_gemm_apis(pybind11::module& m) {
+    pybind11::class_<BatchedGemmArgs>(m, "BatchedGemmArgs")
+        .def(pybind11::init<>())
+        .def_readwrite("Ms", &BatchedGemmArgs::Ms)
+        .def_readwrite("Ns", &BatchedGemmArgs::Ns)
+        .def_readwrite("Ks", &BatchedGemmArgs::Ks)
+        .def_readwrite("batched_count", &BatchedGemmArgs::batched_count)
+        .def_readwrite("dtype", &BatchedGemmArgs::dtype)
+        .def_readwrite("validate", &BatchedGemmArgs::validate)
+        .def_readwrite("warmup", &BatchedGemmArgs::warmup)
+        .def_readwrite("repeat", &BatchedGemmArgs::repeat);
+    
+    m.def("batched_gemm_api", &batched_gemm_api, 
+          "Perform Batched GEMM operations with interface",
+          pybind11::arg("A_tensor"), pybind11::arg("B_tensor"), pybind11::arg("args"));
+}
+
+} // namespace batched_gemm
+
+} // namespace ck_tile_cpp

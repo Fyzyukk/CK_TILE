@@ -1,0 +1,281 @@
+this_dir:/root/workspace/CK_TILE
+
+
+torch.__version__  = 2.9.0.dev20250828+rocm6.4
+
+
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/config.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/config.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/integer.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/integer.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/integral_constant.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/integral_constant.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/type_traits.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/type_traits.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/bit_cast.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/bit_cast.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/numeric.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/numeric.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/half.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/half.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/bfloat16.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/bfloat16.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/random.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/random.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/float8.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/float8_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/int8.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/int8_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/mxfp_convert.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/mxfp_convert.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/pk_fp4.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/pk_fp4.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/type_convert.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/type_convert_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/math.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/math_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/to_sequence.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/to_sequence_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/sequence.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/sequence_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/functional.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/functional_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/array.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/array_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/tuple.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/tuple_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/multi_index.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/multi_index_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/map.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/map_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/container_helper.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/container_helper_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/magic_div.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/magic_div_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/indexing_adaptor.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/indexing_adaptor_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/coordinate_transform.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/coordinate_transform_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_adaptor.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_adaptor_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/cluster_descriptor.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/cluster_descriptor_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/statically_indexed_array.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/statically_indexed_array_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/space_filling_curve.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/space_filling_curve_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/arch.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/arch_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/meta_data_buffer.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/meta_data_buffer_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_adaptor_coordinate.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_adaptor_coordinate_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_distribution_encoding.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_distribution_encoding_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_distribution.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_distribution_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/static_encoding_pattern.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/algorithm/static_encoding_pattern_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/pk_int4.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/pk_int4_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/vector_type.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/vector_type_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/thread_buffer.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/thread_buffer_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/ignore.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/ignore.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/amd_buffer_addressing.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/amd_buffer_addressing_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/amd_buffer_addressing_builtins.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/amd_buffer_addressing_builtins_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/amd_transpose_load_encoding.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/amd_transpose_load_encoding_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/generic_memory_space_atomic.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/generic_memory_space_atomic_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/utility.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/utility.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/workgroup_barrier.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/arch/workgroup_barrier_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/span.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/container/span.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/null_type.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/numeric/null_type.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/buffer_view.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/buffer_view_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/static_distributed_tensor.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/static_distributed_tensor_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_window_base.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_window_base_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_window.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_window_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_window_linear.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_window_linear_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_descriptor.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_descriptor_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_view.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_view_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/null_tile_window.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/null_tile_window_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/null_tensor.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/null_tensor.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/load_tile.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/load_tile_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/load_tile_transpose.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/load_tile_transpose_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_elementwise.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_elementwise_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/transpose_vectors.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/transpose_vectors_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/shuffle_tile.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/shuffle_tile_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/slice_tile.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/slice_tile_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/store_tile.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/store_tile_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/functional_with_tuple.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/functional_with_tuple_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/sweep_tile.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/sweep_tile_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_coordinate.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tensor_coordinate_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_scatter_gather.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_scatter_gather_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_window_utils.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/tile_window_utils_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/transpose_tile.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/transpose_tile_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/update_tile.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/tensor/update_tile_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/env.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/env.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/literals.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/literals.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/philox_rand.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/philox_rand.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/reduce_operator.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/reduce_operator.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/static_counter.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/static_counter.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/unary_element_function.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core/utility/unary_element_function_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/core.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/core_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bgmem_creg_v1_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bgmem_creg_v1_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_problem.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_problem_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bgmem_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bgmem_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_impl.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_impl_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_attribute_mfma_impl.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_attribute_mfma_impl_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_attribute_mfma.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_attribute_mfma_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_smfmac_impl.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_smfmac_impl_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_attribute_smfmac_impl.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_attribute_smfmac_impl_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_attribute_smfmac.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_attribute_smfmac_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_breg_creg_v1_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_breg_creg_v1_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_breg_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_breg_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_breg_creg_v1_custom_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_breg_creg_v1_custom_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v1_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v1_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_one_warp_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_one_warp_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v1_custom_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v1_custom_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v2_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v2_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v2.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v2_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v2r1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v2r1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v2_custom_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_areg_bsmem_creg_v2_custom_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_breg_creg_v1_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_breg_creg_v1_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_breg_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_breg_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_breg_creg_v1_custom_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_breg_creg_v1_custom_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_bsmem_creg_v1_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_bsmem_creg_v1_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_bsmem_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_bsmem_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_bsmem_creg_v1_custom_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_gemm_asmem_bsmem_creg_v1_custom_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_scheduler.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_scheduler_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/elementwise/unary_element_wise_operation.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/elementwise/unary_element_wise_operation_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/common/generic_2d_block_shape.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/common/generic_2d_block_shape.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/common/tensor_layout.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/common/tensor_layout.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/common/utils.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/common/utils_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/elementwise.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/elementwise_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_universal_gemm_as_bs_cr.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_universal_gemm_as_bs_cr_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_universal_gemm_as_bs_cr_fp8.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_universal_gemm_as_bs_cr_fp8_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_wp_asmem_bsmem_creg_v1_custom_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_wp_asmem_bsmem_creg_v1_custom_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_wp_asmem_bsmem_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/block/block_wp_asmem_bsmem_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/common.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/common_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/concat.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/concat_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/hip_check_error.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/hip_check_error.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/stream_config.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/stream_config.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/timer.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/timer.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/kernel_launch.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/kernel_launch_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/stream_utils.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/stream_utils.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/gemm_kernel.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/gemm_kernel_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/batched_gemm_kernel.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/batched_gemm_kernel_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/gemm_kernel_fp8.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/gemm_kernel_fp8_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/gemm_tile_partitioner.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/gemm_tile_partitioner_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_dispatcher.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/warp/warp_gemm_dispatcher_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_universal_pipeline_ag_bg_cr_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_universal_pipeline_ag_bg_cr_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_base.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_base_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v3.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v3_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/arg_parser.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/arg_parser.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/ranges.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/ranges.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/check_err.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/check_err_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/convolution_parameter.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/convolution_parameter.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/joinable_thread.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/joinable_thread.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/host_tensor.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/host_tensor_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/convolution_host_tensor_descriptor_helper.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/convolution_host_tensor_descriptor_helper_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/device_memory.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/device_memory_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/device_prop.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/device_prop.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/fill.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/fill_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/flush_icache.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/flush_icache.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_dropout.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_dropout_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_elementwise.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_elementwise_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_gemm.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_gemm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_masking.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_masking_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_rotary_position_embedding.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_rotary_position_embedding_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_softmax.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_softmax_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_transpose.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_batched_transpose_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_elementwise.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_elementwise_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_fused_moe.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_fused_moe_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_gemm.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_gemm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_grouped_conv_fwd.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_grouped_conv_fwd_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_im2col.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_im2col_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_layernorm2d_fwd.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_layernorm2d_fwd_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_moe_sorting.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_moe_sorting_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_permute.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_permute_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_reduce.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_reduce_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_rmsnorm2d_fwd.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_rmsnorm2d_fwd_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_rowwise_quantization2d.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_rowwise_quantization2d_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_softmax.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_softmax_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_topk.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/reference/reference_topk_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host/rotating_buffers.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host/rotating_buffers_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/host.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/host_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/grouped_gemm_kernel.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/grouped_gemm_kernel_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_universal_pipeline_ag_bg_cr_policy_fp8.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_universal_pipeline_ag_bg_cr_policy_fp8_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_base_fp8.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_base_fp8_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v3_fp8.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v3_fp8_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/grouped_gemm_kernel_fp8.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/kernel/grouped_gemm_kernel_fp8_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v4_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v4_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v4.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v4_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v5_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v5_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v5.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_comp_v5_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_agmem_bgmem_creg_v1_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_agmem_bgmem_creg_v1_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_mem.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_ag_bg_cr_mem_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_agmem_bgmem_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_agmem_bgmem_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_agmem_bgmem_creg_v2_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_agmem_bgmem_creg_v2_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_agmem_bgmem_creg_v2.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_agmem_bgmem_creg_v2_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_problem.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/gemm_pipeline_problem_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/wp_pipeline_agmem_bgmem_creg_v1_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/wp_pipeline_agmem_bgmem_creg_v1_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/wp_pipeline_agmem_bgmem_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/wp_pipeline_agmem_bgmem_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/tile_gemm_shape.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/tile_gemm_shape_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/tile_gemm_traits.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm/pipeline/tile_gemm_traits_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/gemm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/apis/group_gemm/group_gemm.hpp -> /root/workspace/CK_TILE/csrc/apis/group_gemm/group_gemm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/apis/gemm/gemm.hpp -> /root/workspace/CK_TILE/csrc/apis/gemm/gemm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/apis/batched_gemm/batched_gemm.hpp -> /root/workspace/CK_TILE/csrc/apis/batched_gemm/batched_gemm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/block_flatmm_asmem_bsmem_creg_v1_custom_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/block_flatmm_asmem_bsmem_creg_v1_custom_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/block_flatmm_asmem_bsmem_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/block_flatmm_asmem_bsmem_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/flatmm_uk_config.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/flatmm_uk_config.hpp [skipped, no changes]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/flatmm_32x512x128_1x4x1_16x16x32.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/flatmm_32x512x128_1x4x1_16x16x32_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/flatmm_sn_32x128x512_1x4x1_16x16x32.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/flatmm_sn_32x128x512_1x4x1_16x16x32_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/flatmm_sn_32x128x512_1x4x1_16x16x32_itl.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/block/flatmm_sn_32x128x512_1x4x1_16x16x32_itl_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/kernel/flatmm_kernel.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/kernel/flatmm_kernel_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/pipeline/flatmm_pipeline_agmem_bgmem_creg_v1_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/pipeline/flatmm_pipeline_agmem_bgmem_creg_v1_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/pipeline/flatmm_pipeline_agmem_bgmem_creg_v1.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/pipeline/flatmm_pipeline_agmem_bgmem_creg_v1_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/pipeline/tile_flatmm_shape.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm/pipeline/tile_flatmm_shape_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/flatmm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/apis/flatmm/flatmm.hpp -> /root/workspace/CK_TILE/csrc/apis/flatmm/flatmm_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/python_api.cu -> /root/workspace/CK_TILE/csrc/python_api.hip [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue/cshuffle_epilogue.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue/cshuffle_epilogue_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue/default_2d_epilogue.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue/default_2d_epilogue_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce/block/block_reduce.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce/block/block_reduce_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce/block/block_reduce2d.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce/block/block_reduce2d_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce/block/block_reduce2d_problem.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce/block/block_reduce2d_problem_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce/block/block_reduce2d_default_policy.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce/block/block_reduce2d_default_policy_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/reduce_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue/dynamic_quant_epilogue.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue/dynamic_quant_epilogue_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue/default_2d_and_dynamic_quant_epilogue.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue/default_2d_and_dynamic_quant_epilogue_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue.hpp -> /root/workspace/CK_TILE/ck_tile/include/ck_tile/ops/epilogue_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/kernels/group_gemm_kernel/grouped_gemm_kernel.cpp -> /root/workspace/CK_TILE/csrc/kernels/group_gemm_kernel/grouped_gemm_kernel_hip.cpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/apis/group_gemm/group_gemm.cu -> /root/workspace/CK_TILE/csrc/apis/group_gemm/group_gemm.hip [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/kernels/group_gemm_kernel/grouped_gemm_kernel.cu -> /root/workspace/CK_TILE/csrc/kernels/group_gemm_kernel/grouped_gemm_kernel.hip [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/kernels/gemm_kernel/gemm_utils.hpp -> /root/workspace/CK_TILE/csrc/kernels/gemm_kernel/gemm_utils_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/kernels/gemm_kernel/gemm_kernel.cpp -> /root/workspace/CK_TILE/csrc/kernels/gemm_kernel/gemm_kernel_hip.cpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/apis/gemm/gemm.cu -> /root/workspace/CK_TILE/csrc/apis/gemm/gemm.hip [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/kernels/gemm_kernel/gemm_kernel.cu -> /root/workspace/CK_TILE/csrc/kernels/gemm_kernel/gemm_kernel.hip [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/apis/batched_gemm/batched_gemm.cu -> /root/workspace/CK_TILE/csrc/apis/batched_gemm/batched_gemm.hip [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/kernels/batched_gemm_kernel/batched_gemm_kernel.hpp -> /root/workspace/CK_TILE/csrc/kernels/batched_gemm_kernel/batched_gemm_kernel_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/kernels/batched_gemm_kernel/batched_gemm_kernel.cu -> /root/workspace/CK_TILE/csrc/kernels/batched_gemm_kernel/batched_gemm_kernel.hip [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/apis/flatmm/flatmm.cu -> /root/workspace/CK_TILE/csrc/apis/flatmm/flatmm.hip [ok]
+/root/workspace/CK_TILE/csrc/kernels/flatmm_kernel/flatmm_kernel.hpp -> /root/workspace/CK_TILE/csrc/kernels/flatmm_kernel/flatmm_kernel_hip.hpp [skipped, already hipified]
+/root/workspace/CK_TILE/csrc/kernels/flatmm_kernel/flatmm_kernel.cu -> /root/workspace/CK_TILE/csrc/kernels/flatmm_kernel/flatmm_kernel.hip [skipped, already hipified]
+[92mSuccessfully preprocessed all matching files.[0m
+/root/workspace/.venv/lib/python3.12/site-packages/setuptools/__init__.py:92: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
+!!
+
+        ********************************************************************************
+        Requirements should be satisfied by a PEP 517 installer.
+        If you are using pip, you can try `pip install --use-pep517`.
+
+        By 2025-Oct-31, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+        ********************************************************************************
+
+!!
+  dist.fetch_build_eggs(dist.setup_requires)
+Total number of unsupported CUDA function calls: 0
+
+
+Total number of replaced kernel launches: 5
+running install
+/root/workspace/.venv/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        By 2025-Oct-31, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running build
+running build_ext
+building 'ck_tile_python' extension
+[1/1] /opt/rocm-6.4.1/bin/hipcc  -I/root/workspace/CK_TILE/ck_tile/include -I/opt/rocm-6.4.1/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include/torch/csrc/api/include -I/root/workspace/.venv/lib/python3.12/site-packages/torch/include/THH -I/opt/rocm-6.4.1/include -I/root/workspace/.venv/include -I/usr/include/python3.12 -c -c /root/workspace/CK_TILE/csrc/apis/flatmm/flatmm.hip -o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/flatmm/flatmm.o -D__HIP_PLATFORM_AMD__=1 -DUSE_ROCM=1 -DHIPBLAS_V2 -fPIC -DCUDA_HAS_FP16=1 -D__HIP_NO_HALF_OPERATORS__=1 -D__HIP_NO_HALF_CONVERSIONS__=1 -DHIP_ENABLE_WARP_SYNC_BUILTINS=1 --offload-arch=gfx942 -O3 -std=c++17 -fgpu-flush-denormals-to-zero -DCK_ENABLE_BF16 -DCK_ENABLE_BF8 -DCK_ENABLE_FP16 -DCK_ENABLE_FP32 -DCK_ENABLE_FP64 -DCK_ENABLE_FP8 -DCK_ENABLE_INT8 -DCK_USE_XDL -DUSE_PROF_API=1 -D__HIP_PLATFORM_HCC__=1 -Wno-unknown-pragmas -Wno-comment -DCK_TILE_FLOAT_TO_BFLOAT16_DEFAULT=3 -mllvm --lsr-drop-solution=1 -fno-offload-uniform-block -mllvm -enable-post-misched=0 -mllvm -amdgpu-early-inline-all=true -mllvm -amdgpu-function-calls=false -DCK_TILE_FLOAT_TO_BFLOAT16_DEFAULT=3 -DTORCH_API_INCLUDE_EXTENSION_H -DTORCH_EXTENSION_NAME=ck_tile_python -fno-gpu-rdc
+x86_64-linux-gnu-g++ -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -shared -Wl,-O1 -Wl,-Bsymbolic-functions /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/batched_gemm/batched_gemm.o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/flatmm/flatmm.o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/gemm/gemm.o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/apis/group_gemm/group_gemm.o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/kernels/batched_gemm_kernel/batched_gemm_kernel.o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/kernels/flatmm_kernel/flatmm_kernel.o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/kernels/gemm_kernel/gemm_kernel.o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/kernels/group_gemm_kernel/grouped_gemm_kernel.o /root/workspace/CK_TILE/build/temp.linux-x86_64-cpython-312/csrc/python_api.o -L/root/workspace/.venv/lib/python3.12/site-packages/torch/lib -L/opt/rocm-6.4.1/lib -L/opt/rocm-6.4.1/hip/lib -L/usr/lib/x86_64-linux-gnu -lc10 -ltorch -ltorch_cpu -ltorch_python -lamdhip64 -lc10_hip -ltorch_hip -o build/lib.linux-x86_64-cpython-312/ck_tile_python.cpython-312-x86_64-linux-gnu.so
+running install_lib
+copying build/lib.linux-x86_64-cpython-312/ck_tile_python.cpython-312-x86_64-linux-gnu.so -> /root/workspace/.venv/lib/python3.12/site-packages
+running install_egg_info
+running egg_info
+writing ck_tile_python.egg-info/PKG-INFO
+writing dependency_links to ck_tile_python.egg-info/dependency_links.txt
+writing requirements to ck_tile_python.egg-info/requires.txt
+writing top-level names to ck_tile_python.egg-info/top_level.txt
+reading manifest file 'ck_tile_python.egg-info/SOURCES.txt'
+writing manifest file 'ck_tile_python.egg-info/SOURCES.txt'
+removing '/root/workspace/.venv/lib/python3.12/site-packages/ck_tile_python-0.1.0-py3.12.egg-info' (and everything under it)
+Copying ck_tile_python.egg-info to /root/workspace/.venv/lib/python3.12/site-packages/ck_tile_python-0.1.0-py3.12.egg-info
+running install_scripts
