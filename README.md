@@ -14,14 +14,21 @@ CK_TILE/
 ```
 
 ## 安装步骤
+
+```
 python3 setup.py install
 python3 setup.py install > build.log 2>&1
+```
 
 ## 测试步骤
+
+```
 python3 test_gemm.py
 python3 test_gemm.py > test_gemm.log 2>&1
+```
 
 ## Example
+```
 import ck_tile_python
 
 ck_tile_python.gemm_api(A_tensor, B_tensor, args)
@@ -29,3 +36,4 @@ ck_tile_python.batched_gemm_api(A_tensor, B_tensor, args)
 ck_tile_python.flatmm_api(A_tensor, B_tensor, args)
 ck_tile_python.grouped_gemm_api(A_tensors, B_tensors, args)
 .....
+```
