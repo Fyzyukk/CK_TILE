@@ -7,7 +7,6 @@ namespace ck_tile_cpp {
 
 namespace layernorm2d {
 
-// Python API 参数结构
 struct Layernorm2dArgs {
     int m = 0;                    // m dimension
     int n = 0;                    // n dimension
@@ -25,14 +24,12 @@ struct Layernorm2dArgs {
     bool validate = true;         // enable validation
 };
 
-// 主要的 Python API 函数
 torch::Tensor layernorm2d_api(
     torch::Tensor& x_tensor,
     torch::Tensor& gamma_tensor,
     torch::Tensor& beta_tensor,
     const Layernorm2dArgs& args);
 
-// 带残差连接的版本
 torch::Tensor layernorm2d_with_residual_api(
     torch::Tensor& x_tensor,
     torch::Tensor& x_residual_tensor,
@@ -40,7 +37,6 @@ torch::Tensor layernorm2d_with_residual_api(
     torch::Tensor& beta_tensor,
     const Layernorm2dArgs& args);
 
-// 带偏置的版本
 torch::Tensor layernorm2d_with_bias_api(
     torch::Tensor& x_tensor,
     torch::Tensor& x_bias_tensor,
@@ -48,7 +44,6 @@ torch::Tensor layernorm2d_with_bias_api(
     torch::Tensor& beta_tensor,
     const Layernorm2dArgs& args);
 
-// 注册 Python 绑定
 void register_layernorm2d_apis(pybind11::module& m);
 
 } // namespace layernorm2d

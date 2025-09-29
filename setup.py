@@ -89,7 +89,7 @@ def validate_and_update_archs(archs):
     # Validate if each element in archs is in allowed_archs
     assert all(
         arch in allowed_archs for arch in archs
-    ), f"One of GPU archs of {archs} is invalid or not supported by Flash-Attention"
+    ), f"One of GPU archs of {archs} is invalid or not supported"
 
 
 cmdclass = {}
@@ -157,8 +157,8 @@ if IS_ROCM:
         "csrc/kernels/batched_gemm_kernel/batched_gemm_kernel.cpp",
         "csrc/apis/flatmm/flatmm.cpp",
         "csrc/kernels/flatmm_kernel/flatmm_kernel.cpp",
-        "csrc/apis/layernorm2d/layernorm2d.cpp",
-        "csrc/kernels/layernorm_2d/layernorm_2d_fwd_kernel.cpp"
+        # "csrc/apis/layernorm2d/layernorm2d.cpp",
+        # "csrc/kernels/layernorm_2d/layernorm_2d_fwd_kernel.cpp"
     ]
 
     rename_cpp_to_cu(sources)
@@ -173,8 +173,8 @@ if IS_ROCM:
         "csrc/kernels/batched_gemm_kernel/batched_gemm_kernel.cu",
         "csrc/apis/flatmm/flatmm.cu",
         "csrc/kernels/flatmm_kernel/flatmm_kernel.cu",
-        "csrc/apis/layernorm2d/layernorm2d.cu",
-        "csrc/kernels/layernorm_2d/layernorm_2d_fwd_kernel.cu"
+        # "csrc/apis/layernorm2d/layernorm2d.cu",
+        # "csrc/kernels/layernorm_2d/layernorm_2d_fwd_kernel.cu"
     ]
 
     extra_compile_args = {

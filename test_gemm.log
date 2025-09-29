@@ -1,0 +1,80 @@
+Launching kernel with args: gemm_1_pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+shape: tile_gemm_shape_256x256x32x4_2x2x1_32x32x16
+problem: gemm_problem_256_0x0x0_Intrawave
+pipeline: pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+grid: {64, 1, 1}, blocks: {256, 1, 1}
+Launching kernel with args: gemm_1_pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+shape: tile_gemm_shape_256x256x32x4_2x2x1_32x32x16
+problem: gemm_problem_256_0x0x0_Intrawave
+pipeline: pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+grid: {64, 1, 1}, blocks: {256, 1, 1}
+Launching kernel with args: gemm_1_pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+shape: tile_gemm_shape_256x256x32x4_2x2x1_32x32x16
+problem: gemm_problem_256_0x0x0_Intrawave
+pipeline: pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+grid: {64, 1, 1}, blocks: {256, 1, 1}
+Launching kernel with args: gemm_1_pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+shape: tile_gemm_shape_256x256x32x4_2x2x1_32x32x16
+problem: gemm_problem_256_0x0x0_Intrawave
+pipeline: pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+grid: {64, 1, 1}, blocks: {256, 1, 1}
+Launching kernel with args: gemm_1_pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+shape: tile_gemm_shape_256x256x32x4_2x2x1_32x32x16
+problem: gemm_problem_256_0x0x0_Intrawave
+pipeline: pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+grid: {64, 1, 1}, blocks: {256, 1, 1}
+Launching kernel with args: gemm_1_pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+shape: tile_gemm_shape_256x256x32x4_2x2x1_32x32x16
+problem: gemm_problem_256_0x0x0_Intrawave
+pipeline: pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+grid: {64, 1, 1}, blocks: {256, 1, 1}
+Launching kernel with args: gemm_1_pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+shape: tile_gemm_shape_256x256x32x4_2x2x1_32x32x16
+problem: gemm_problem_256_0x0x0_Intrawave
+pipeline: pipeline_AgBgCrCompV3_256x256x32x256_8x8x1_0x0x0
+grid: {4, 1, 1}, blocks: {256, 1, 1}
+开始测试 ck_tile_python GEMM 模块
+==================================================
+✅ Device 可用，设备: AMD Instinct MI308X
+==================================================
+测试模块导入...
+成功导入 ck_tile_python 模块
+可用函数: ['BatchedGemmArgs', 'FlatmmArgs', 'GemmArgs', 'GroupGemmArgs', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'batched_gemm_api', 'flatmm_api', 'gemm_api', 'grouped_gemm_api']
+==================================================
+测试 GemmArgs 结构...
+参数创建成功:
+  Ms: 2048
+  Ns: 2048
+  Ks: 2048
+  dtype: fp16
+  persistent: False
+==================================================
+创建测试张量...
+矩阵尺寸: A(2048x2048), B(2048x2048) -> C(2048x2048)
+A tensor: shape=torch.Size([2048, 2048]), stride=(2048, 1)
+B tensor: shape=torch.Size([2048, 2048]), stride=(2048, 1)
+==================================================
+测试 gemm_api 函数...
+执行成功！耗时: 0.0402 秒
+返回结果张量形状: torch.Size([2048, 2048])
+期望形状 (2048, 2048), 实际形状 (2048, 2048)
+✅ 形状正确
+==================================================
+验证结果正确性...
+✅ 结果正确
+==================================================
+性能对比测试...
+测试 ck_tile_python 实现...
+测试 PyTorch 实现...
+结果对比:
+  ck_tile_python: 1.24 ms/iter, 2764.64 GFLOPS
+  PyTorch:        0.14 ms/iter, 24409.75 GFLOPS
+  加速比:         0.11x
+==================================================
+测试 fp16 数据类型...
+创建 fp16 张量: A(512x512), B(512x512)
+A tensor: shape=torch.Size([512, 512]), dtype=torch.float16
+B tensor: shape=torch.Size([512, 512]), dtype=torch.float16
+✅ fp16 GEMM 测试成功
+结果张量: shape=torch.Size([512, 512]), dtype=torch.float16
+==================================================

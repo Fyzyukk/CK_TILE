@@ -4,7 +4,6 @@
 #include <hip/hip_runtime.h>
 #include <iostream>
 
-// 外部 C 函数声明
 extern "C" float layernorm2d_fwd_fp16_fp16(
     const ck_tile::Layernorm2dFwdHostArgs& args,
     const ck_tile::stream_config& s);
@@ -31,12 +30,10 @@ torch::Tensor layernorm2d_api(
     torch::Tensor& beta_tensor,
     const Layernorm2dArgs& args) {
 
-    // 检查输入张量
     TORCH_CHECK(x_tensor.is_cuda(), "x_tensor must be on CUDA device");
     TORCH_CHECK(gamma_tensor.is_cuda(), "gamma_tensor must be on CUDA device");
     TORCH_CHECK(beta_tensor.is_cuda(), "beta_tensor must be on CUDA device");
     
-    // 确保张量是连续的
     if (!x_tensor.is_contiguous()) {
         x_tensor = x_tensor.contiguous();
     }
@@ -47,11 +44,9 @@ torch::Tensor layernorm2d_api(
         beta_tensor = beta_tensor.contiguous();
     }
 
-    // 获取维度信息
     const int m = args.m > 0 ? args.m : x_tensor.size(0);
     const int n = args.n > 0 ? args.n : x_tensor.size(1);
     
-    // 检查张量形状
     TORCH_CHECK(x_tensor.size(0) == m && x_tensor.size(1) == n, 
                 "x_tensor shape mismatch: expected (", m, ", ", n, "), got ", x_tensor.sizes());
     TORCH_CHECK(gamma_tensor.size(0) == n, 
@@ -59,7 +54,6 @@ torch::Tensor layernorm2d_api(
     TORCH_CHECK(beta_tensor.size(0) == n, 
                 "beta_tensor shape mismatch: expected (", n, "), got ", beta_tensor.sizes());
 
-    // 确定输出数据类型
     torch::ScalarType output_dtype;
     std::string prec_o = args.prec_o;
     if (prec_o == "auto") {
@@ -78,30 +72,27 @@ torch::Tensor layernorm2d_api(
         TORCH_CHECK(false, "Unsupported output precision: ", prec_o);
     }
 
-    // 创建输出张量
     auto y_tensor = torch::zeros({m, n}, 
                                  torch::TensorOptions()
                                  .dtype(output_dtype)
                                  .device(x_tensor.device())
                                  .memory_format(torch::MemoryFormat::Contiguous));
 
-    // 计算步长
-    int x_stride = n;  // 默认行主序
-    int y_stride = n;  // 默认行主序
+    int x_stride = n;  
+    int y_stride = n; 
 
-    // 创建 layernorm2d 参数
     ck_tile::Layernorm2dFwdHostArgs layernorm_args;
     layernorm_args.p_x = x_tensor.data_ptr();
-    layernorm_args.p_x_residual = nullptr;  // 无残差连接
-    layernorm_args.p_sm_scale = nullptr;    // 无平滑量化
-    layernorm_args.p_x_bias = nullptr;      // 无偏置
+    layernorm_args.p_x_residual = nullptr;  
+    layernorm_args.p_sm_scale = nullptr;   
+    layernorm_args.p_x_bias = nullptr;      
     layernorm_args.p_gamma = gamma_tensor.data_ptr();
     layernorm_args.p_beta = beta_tensor.data_ptr();
     layernorm_args.p_y = y_tensor.data_ptr();
-    layernorm_args.p_y_residual = nullptr;  // 无残差输出
-    layernorm_args.p_y_scale = nullptr;     // 无量化缩放
-    layernorm_args.p_mean = nullptr;        // 不保存均值
-    layernorm_args.p_inv_std = nullptr;     // 不保存标准差
+    layernorm_args.p_y_residual = nullptr;  
+    layernorm_args.p_y_scale = nullptr;     
+    layernorm_args.p_mean = nullptr;        
+    layernorm_args.p_inv_std = nullptr;     
     layernorm_args.epsilon = args.epsilon;
     layernorm_args.m = m;
     layernorm_args.n = n;
@@ -110,10 +101,8 @@ torch::Tensor layernorm2d_api(
     layernorm_args.y_row_stride = y_stride;
     layernorm_args.y_residual_row_stride = y_stride;
 
-    // 创建流配置
     ck_tile::stream_config s{nullptr, true, 1, args.warmup, args.repeat, true, true, 10};
 
-    // 根据数据类型调用相应的内核
     const auto kBF16 = static_cast<torch::ScalarType>(c10::ScalarType::BFloat16);
     const auto kFP8 = static_cast<torch::ScalarType>(c10::ScalarType::Float8_e4m3fn);
 
@@ -139,13 +128,11 @@ torch::Tensor layernorm2d_with_residual_api(
     torch::Tensor& beta_tensor,
     const Layernorm2dArgs& args) {
 
-    // 检查输入张量
     TORCH_CHECK(x_tensor.is_cuda(), "x_tensor must be on CUDA device");
     TORCH_CHECK(x_residual_tensor.is_cuda(), "x_residual_tensor must be on CUDA device");
     TORCH_CHECK(gamma_tensor.is_cuda(), "gamma_tensor must be on CUDA device");
     TORCH_CHECK(beta_tensor.is_cuda(), "beta_tensor must be on CUDA device");
     
-    // 确保张量是连续的
     if (!x_tensor.is_contiguous()) {
         x_tensor = x_tensor.contiguous();
     }
@@ -159,11 +146,10 @@ torch::Tensor layernorm2d_with_residual_api(
         beta_tensor = beta_tensor.contiguous();
     }
 
-    // 获取维度信息
     const int m = args.m > 0 ? args.m : x_tensor.size(0);
     const int n = args.n > 0 ? args.n : x_tensor.size(1);
     
-    // 检查张量形状
+
     TORCH_CHECK(x_tensor.size(0) == m && x_tensor.size(1) == n, 
                 "x_tensor shape mismatch: expected (", m, ", ", n, "), got ", x_tensor.sizes());
     TORCH_CHECK(x_residual_tensor.size(0) == m && x_residual_tensor.size(1) == n, 
@@ -173,7 +159,6 @@ torch::Tensor layernorm2d_with_residual_api(
     TORCH_CHECK(beta_tensor.size(0) == n, 
                 "beta_tensor shape mismatch: expected (", n, "), got ", beta_tensor.sizes());
 
-    // 确定输出数据类型
     torch::ScalarType output_dtype;
     std::string prec_o = args.prec_o;
     if (prec_o == "auto") {
@@ -192,14 +177,12 @@ torch::Tensor layernorm2d_with_residual_api(
         TORCH_CHECK(false, "Unsupported output precision: ", prec_o);
     }
 
-    // 创建输出张量
     auto y_tensor = torch::zeros({m, n}, 
                                  torch::TensorOptions()
                                  .dtype(output_dtype)
                                  .device(x_tensor.device())
                                  .memory_format(torch::MemoryFormat::Contiguous));
 
-    // 如果需要残差输出，创建残差输出张量
     torch::Tensor y_residual_tensor;
     if (args.fused_add == 1) {
         y_residual_tensor = torch::zeros({m, n}, 
@@ -209,13 +192,11 @@ torch::Tensor layernorm2d_with_residual_api(
                                          .memory_format(torch::MemoryFormat::Contiguous));
     }
 
-    // 计算步长
     int x_stride = n;
     int xr_stride = n;
     int y_stride = n;
     int yr_stride = n;
 
-    // 创建 layernorm2d 参数
     ck_tile::Layernorm2dFwdHostArgs layernorm_args;
     layernorm_args.p_x = x_tensor.data_ptr();
     layernorm_args.p_x_residual = x_residual_tensor.data_ptr();
@@ -236,10 +217,8 @@ torch::Tensor layernorm2d_with_residual_api(
     layernorm_args.y_row_stride = y_stride;
     layernorm_args.y_residual_row_stride = yr_stride;
 
-    // 创建流配置
     ck_tile::stream_config s{nullptr, true, 1, args.warmup, args.repeat, true, true, 10};
 
-    // 根据数据类型调用相应的内核
     const auto kBF16 = static_cast<torch::ScalarType>(c10::ScalarType::BFloat16);
 
     if (x_tensor.dtype() == torch::kFloat16 && y_tensor.dtype() == torch::kFloat16) {
@@ -260,13 +239,11 @@ torch::Tensor layernorm2d_with_bias_api(
     torch::Tensor& beta_tensor,
     const Layernorm2dArgs& args) {
 
-    // 检查输入张量
     TORCH_CHECK(x_tensor.is_cuda(), "x_tensor must be on CUDA device");
     TORCH_CHECK(x_bias_tensor.is_cuda(), "x_bias_tensor must be on CUDA device");
     TORCH_CHECK(gamma_tensor.is_cuda(), "gamma_tensor must be on CUDA device");
     TORCH_CHECK(beta_tensor.is_cuda(), "beta_tensor must be on CUDA device");
     
-    // 确保张量是连续的
     if (!x_tensor.is_contiguous()) {
         x_tensor = x_tensor.contiguous();
     }
@@ -280,11 +257,9 @@ torch::Tensor layernorm2d_with_bias_api(
         beta_tensor = beta_tensor.contiguous();
     }
 
-    // 获取维度信息
     const int m = args.m > 0 ? args.m : x_tensor.size(0);
     const int n = args.n > 0 ? args.n : x_tensor.size(1);
     
-    // 检查张量形状
     TORCH_CHECK(x_tensor.size(0) == m && x_tensor.size(1) == n, 
                 "x_tensor shape mismatch: expected (", m, ", ", n, "), got ", x_tensor.sizes());
     TORCH_CHECK(x_bias_tensor.size(0) == n, 
@@ -294,7 +269,6 @@ torch::Tensor layernorm2d_with_bias_api(
     TORCH_CHECK(beta_tensor.size(0) == n, 
                 "beta_tensor shape mismatch: expected (", n, "), got ", beta_tensor.sizes());
 
-    // 确定输出数据类型
     torch::ScalarType output_dtype;
     std::string prec_o = args.prec_o;
     if (prec_o == "auto") {
@@ -309,17 +283,14 @@ torch::Tensor layernorm2d_with_bias_api(
         TORCH_CHECK(false, "Unsupported output precision: ", prec_o);
     }
 
-    // 创建输出张量
     auto y_tensor = torch::zeros({m, n}, 
                                  torch::TensorOptions()
                                  .dtype(output_dtype)
                                  .device(x_tensor.device())
                                  .memory_format(torch::MemoryFormat::Contiguous));
 
-    // 计算步长
     int x_stride = n;
 
-    // 创建 layernorm2d 参数
     ck_tile::Layernorm2dFwdHostArgs layernorm_args;
     layernorm_args.p_x = x_tensor.data_ptr();
     layernorm_args.p_x_residual = nullptr;
@@ -340,10 +311,7 @@ torch::Tensor layernorm2d_with_bias_api(
     layernorm_args.y_row_stride = x_stride;
     layernorm_args.y_residual_row_stride = x_stride;
 
-    // 创建流配置
     ck_tile::stream_config s{nullptr, true, 1, args.warmup, args.repeat, true, true, 10};
-
-    // 根据数据类型调用相应的内核
     const auto kBF16 = static_cast<torch::ScalarType>(c10::ScalarType::BFloat16);
 
     if (x_tensor.dtype() == torch::kFloat16 && y_tensor.dtype() == torch::kFloat16) {

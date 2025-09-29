@@ -5,10 +5,9 @@ cd "$script_dir"
 # echo "Original directory: $original_dir"
 # echo "Script directory: $script_dir"
 
-# 创建必要的目录
 # mkdir -p ck_tile/include
 
-# # 创建 Composable Kernel 符号链接
+# Composable Kernel 
 # if [ -d "$script_dir/../composable_kernel_fyz" ]; then
 #     ln -sf $script_dir/../composable_kernel_fyz/include/ck ck_tile/include/
 #     ln -sf $script_dir/../composable_kernel_fyz/include/ck_tile ck_tile/include/
